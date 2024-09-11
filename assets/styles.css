@@ -1,0 +1,148 @@
+/* jamesgwyer.com/assets/styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* main stuff like screen settings */
+
+@media (prefers-color-scheme: light) {
+  :root {
+	  --background-color: white;
+	  --foreground-color: black;
+	  --link-color: rebeccapurple;
+    --code-snippet-bg: #eee;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+	  --background-color: black;
+	  --foreground-color: white;
+	  --link-color: #99cc66;
+    --code-snippet-bg: #111;
+  }
+}
+
+* {
+  scrollbar-color: var(--code-snippet-bg) var(--background-color);
+}
+
+body {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  font-family:'Inter', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  min-height: 100%;
+  overflow-wrap: break-word;
+}
+
+/* page layouts */
+
+.content {
+  max-width: 666px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+.content-left {
+  max-width: 333px;
+  padding: 2rem 2rem;
+}
+
+.wide {
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* text and links */
+
+.subtitle {
+  font-style: italic;
+  color: grey;
+}
+
+.name {
+  font-weight: 500;
+}
+
+p { margin: 1rem 0; }
+
+a { color: var(--link-color); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+a.menu { color: var(--foreground-color); text-decoration: underline; }
+a.menu:hover { color: var(--foreground-color); text-decoration: none; }
+a.bold { color: var(--foreground-color); text-decoration: none; }
+a.bold:hover { color: var(--foreground-color); text-decoration: underline; }
+
+a.icon { text-decoration: none; color: gray; }
+a.icon:hover { text-decoration: none; color: var(--foreground-color); }
+
+/* other stuff */
+
+li { margin: 0.4rem 0; }
+
+hr {
+  text-align: center;
+  border: 0;
+  margin: 2rem 0;
+  font-weight: 500;
+
+  &:before { content: '♡ ' }
+  &:after { content: attr(data-content) ' ♡' }
+  /* aw cute */
+  /* and in case i forget:
+  <hr data-content="TEXT HERE" />
+  */
+}
+
+table { width: 100%; }
+
+table, th, td {
+  border: thin solid var(--foreground-color);
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
+
+details { margin: 0.5rem 0; }
+summary { font-weight: 500; }
+
+pre code {
+  background-color: var(--code-snippet-bg);
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+}
+
+blockquote {
+  font-style: italic;
+  border: thin solid var(--foreground-color);
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: float; /* used to be "block", hope this doesn't break everything x */
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* things for other sites and other stuff that i don't know where to put (aka overflow section) */
+
