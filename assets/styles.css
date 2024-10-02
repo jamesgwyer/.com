@@ -144,5 +144,17 @@ img {
   display: none;
 }
 
+/* login page stuff (like on archive) */
+
+form {
+  background-color: var(--code-snippet-bg);
+  color: var(--background-color);
+}
+
+button {
+  background-color: var(--code-snippet-bg);
+  color: var(--background-color);
+}
+
 /* things for other sites and other stuff that i don't know where to put (aka overflow section) */
 
