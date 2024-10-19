@@ -2,11 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+
+
 /* main stuff like screen settings */
 
 @media (prefers-color-scheme: light) {
   :root {
-	  --background-color: white;
+    --background-color: white;
 	  --foreground-color: black;
 	  --link-color: rebeccapurple;
     --code-snippet-bg: #eee;
@@ -70,7 +72,6 @@ footer {
 /* text and links */
 
 .subtitle {
-  font-style: italic;
   color: grey;
 }
 
@@ -144,16 +145,38 @@ img {
   display: none;
 }
 
+/* link tree page */
+
+.links {
+  max-width: 333px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.link-button {
+  border: 1.5px solid;
+  border-color: var(--code-snippet-bg);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.link-button:hover {
+  background-color: var(--code-snippet-bg);
+}
+
 /* login page stuff (like on archive) */
 
-form {
+input {
   background-color: var(--code-snippet-bg);
-  color: var(--background-color);
+  border: none;
 }
 
 button {
   background-color: var(--code-snippet-bg);
-  color: var(--background-color);
+  color: var(--foreground-color);
+  border: none;
 }
 
 /* things for other sites and other stuff that i don't know where to put (aka overflow section) */

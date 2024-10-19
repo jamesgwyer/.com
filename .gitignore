@@ -3,6 +3,8 @@
 /assets/img/work/rdds-work-experience
 /assets/js/fontawesome/fontawesome-free-6.5.2-web
 
+/archive
+
 /directory.html
 
 /draft
@@ -10,10 +12,9 @@
 /notes
 /notes/template.html
 
-/personal-projects
-
 /redirect.html
 
 /vercel.json
 
 /work
+/links.html
