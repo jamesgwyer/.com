@@ -88,13 +88,13 @@ a.menu { color: var(--foreground-color); text-decoration: underline; }
 a.menu:hover { color: var(--foreground-color); text-decoration: none; }
 a.bold { color: var(--foreground-color); text-decoration: none; }
 a.bold:hover { color: var(--foreground-color); text-decoration: underline; }
-
 a.icon { text-decoration: none; color: gray; }
 a.icon:hover { text-decoration: none; color: var(--foreground-color); }
 
 /* other stuff */
 
 li { margin: 0.4rem 0; }
+li::marker { color: var(--code-snippet-bg); }
 
 hr {
   text-align: center;
@@ -104,8 +104,8 @@ hr {
 
   &:before { content: '♡ ' }
   &:after { content: attr(data-content) ' ♡' }
-  /* aw cute */
-  /* and in case i forget:
+  /* aw cute
+  and in case i forget:
   <hr data-content="TEXT HERE" />
   */
 }
@@ -113,7 +113,7 @@ hr {
 table { width: 100%; }
 
 table, th, td {
-  border: thin solid var(--foreground-color);
+  border: 1.5px solid var(--code-snippet-bg);
   border-collapse: collapse;
   padding: 0.4rem;
 }
@@ -131,7 +131,7 @@ pre code {
 
 blockquote {
   font-style: italic;
-  border: thin solid var(--foreground-color);
+  border: 1.5px solid var(--code-snippet-bg);
   padding: 1rem;
 }
 
