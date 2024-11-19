@@ -5,6 +5,8 @@
 
 /archive
 
+/dev
+
 /directory.html
 
 /draft
@@ -14,7 +16,8 @@
 
 /redirect.html
 
+/rss.xml
+
 /vercel.json
 
 /work
-/links.html

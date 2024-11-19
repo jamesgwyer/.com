@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-colour: white;
+        --fg-colour: black;
+        --link-colour: rebeccapurple;
+        --code-bg: #eee;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-colour: black;
+        --fg-colour: white;
+        --link-colour: #99cc66;
+        --code-bg: #111;
+    }
+}
+
+* { scrollbar-color: var(--code-bg) var(--bg-color); }
+
+body {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    font-family:'Inter', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    min-height: 100%;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
+  
+main {
+    padding: 2rem 2rem;
+}
+
+article {
+    max-width: 666px;
+    margin: 0 auto;
+}
+  
+header {
+    margin-bottom: 2rem;
+}
+
+main.content-left {
+    max-width: 444px;
+}
+
+p { margin: 1rem 0; font-weight: 300; }
+
+a { font-weight: 400; color: var(--link-colour); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+a.menu { color: var(--fg-colour); text-decoration: underline; }
+a.menu:hover { color: var(--fg-colour); text-decoration: none; }
+a.bold { color: var(--fg-colour); text-decoration: none; }
+a.bold:hover { color: var(--fg-colour); text-decoration: underline; }
+a.icon { color: var(--fg-colour); opacity: 0.5; }
+a.icon:hover { text-decoration: none; opacity: 1; }
+
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    width: 40px;
+    color: var(--fg-colour);
+    font-weight: 400;
+}
+
+a.underline:hover { text-decoration: none; }
+
+.underline:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -3px;
+    background: var(--link-colour);
+    height: 1.5px;
+    transition-property: left right;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+    right: 0;
+}
+
+.subtitle {
+    opacity: 0.5; font-weight: 300;
+}
+  
+.name {
+    font-weight: 500;
+}

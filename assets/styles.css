@@ -1,6 +1,6 @@
 /* jamesgwyer.com/assets/styles.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 
 
@@ -36,6 +36,7 @@ body {
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
+  line-height: 1.5;
 }
 
 /* page layouts */
@@ -47,7 +48,7 @@ body {
 }
 
 .content-left {
-  max-width: 333px;
+  max-width: 444px;
   padding: 2rem 2rem;
 }
 
@@ -61,28 +62,42 @@ header {
 }
 
 footer {
+  width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  padding: 2rem 2rem;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 222px;
+  justify-content: center;
+  gap: 1rem 1rem;
+}
+
+.container-item {
+  padding: 1rem 1rem;
+  background-color: var(--code-snippet-bg);
+  border-radius: 0.5rem;
+  flex: 1 0 150px;
 }
 
 /* text and links */
 
 .subtitle {
-  color: grey;
+  opacity: 0.5; font-weight: 300;
 }
 
 .name {
   font-weight: 500;
 }
 
-p { margin: 1rem 0; }
+p { margin: 1rem 0; font-weight: 300; }
 
-a { color: var(--link-color); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { font-weight: 400; color: var(--foreground-color); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--link-color); }
 
 a.menu { color: var(--foreground-color); text-decoration: underline; }
 a.menu:hover { color: var(--foreground-color); text-decoration: none; }
@@ -90,6 +105,37 @@ a.bold { color: var(--foreground-color); text-decoration: none; }
 a.bold:hover { color: var(--foreground-color); text-decoration: underline; }
 a.icon { text-decoration: none; color: gray; }
 a.icon:hover { text-decoration: none; color: var(--foreground-color); }
+
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  color: var(--foreground-color);
+  font-weight: 400;
+}
+
+.underline:hover { text-decoration: none; }
+
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -3px;
+  background: var(--link-color);
+  height: 1.5px;
+  transition-property: left right;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
+}
 
 /* other stuff */
 
