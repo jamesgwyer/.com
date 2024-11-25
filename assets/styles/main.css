@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/* jamesgwyer.com (https://github.com/jamesgwyer/.com) */
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -18,11 +21,11 @@
     }
 }
 
-* { scrollbar-color: var(--code-bg) var(--bg-color); }
+* { scrollbar-color: var(--code-bg) var(--bg-colour); }
 
 body {
-    color: var(--fg-color);
-    background-color: var(--bg-color);
+    color: var(--fg-colour);
+    background-color: var(--bg-colour);
     font-family:'Inter', sans-serif;
     font-size: 14px;
     margin: 0;
@@ -45,10 +48,27 @@ header {
 }
 
 main.content-left {
-    max-width: 444px;
+    max-width: 333px;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
-p { margin: 1rem 0; font-weight: 300; }
+main.links {
+    max-width: 333px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+main.login {
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+p { margin-bottom: 1rem; font-weight: 300; }
+
+li { margin: 0.4rem 0; }
+li::marker { color: var(--code-bg); }
 
 a { font-weight: 400; color: var(--link-colour); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -60,7 +80,7 @@ a.bold:hover { color: var(--fg-colour); text-decoration: underline; }
 a.icon { color: var(--fg-colour); opacity: 0.5; }
 a.icon:hover { text-decoration: none; opacity: 1; }
 
-.underline {
+a.underline {
     display: inline;
     position: relative;
     overflow: hidden;
@@ -71,7 +91,7 @@ a.icon:hover { text-decoration: none; opacity: 1; }
 
 a.underline:hover { text-decoration: none; }
 
-.underline:after {
+a.underline:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -85,9 +105,9 @@ a.underline:hover { text-decoration: none; }
     transition-timing-function: ease-out;
 }
 
-.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
+a.underline:hover:after,
+a.underline:focus:after,
+a.underline:active:after {
     right: 0;
 }
 
@@ -97,4 +117,27 @@ a.underline:hover { text-decoration: none; }
   
 .name {
     font-weight: 500;
+}
+
+input {
+    background-color: var(--code-bg);
+    border: none;
+}
+  
+button {
+    background-color: var(--code-bg);
+    color: var(--fg-colour);
+    border: none;
+}
+
+.link-button {
+    border: 1.5px solid;
+    border-color: var(--code-bg);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+  
+.link-button:hover {
+    background-color: var(--code-bg);
 }
