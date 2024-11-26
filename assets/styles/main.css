@@ -37,14 +37,14 @@ body {
 main {
     padding: 2rem 2rem;
 }
-
-article {
-    max-width: 666px;
-    margin: 0 auto;
-}
   
 header {
     margin-bottom: 2rem;
+}
+
+main.content {
+    max-width: 666px;
+    margin: 0 auto;
 }
 
 main.content-left {
@@ -61,6 +61,7 @@ main.links {
 }
 
 main.login {
+    max-width: 444px;
     padding: 2rem 2rem;
     text-align: center;
 }
